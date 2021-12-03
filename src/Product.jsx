@@ -6,27 +6,33 @@ const Product = ({ product, search }) => {
 
   return (
     <div className="card">
-      <h2>{product.title}</h2>
+      <header>
+        <h2>{product.title}</h2>
+      </header>
       <hr />
-      {showPrice && 
-        <>
-          <p>{product.description}</p>
-          <p>{product.price} <span>{product.currency}</span> </p>
-        </>
-      }
-      {!showPrice && 
-        product.opinions.map(opinion => 
+      <main>
+        {showPrice && 
           <>
-            <p>{opinion.message}</p>
-            <p>({opinion.name})</p>
+            <p>{product.description}</p>
+            <p>{product.price} <span>{product.currency}</span> </p>
           </>
-        )
-      }
+        }
+        {!showPrice && 
+          product.opinions.map(opinion => 
+            <>
+              <p>{opinion.message}</p>
+              <p className="name">({opinion.name})</p>
+            </>
+          )
+        }
+      </main>
       <hr />
-      <div className="bar">
+      <footer className="bar">
         <button onClick={() => setShowPrice(!showPrice)}>{showPrice ? 'Show opinions' : 'Show description' }</button>
         <button disabled={true}>Add to cart</button>
-      </div>
+      </footer>
+      { product.discount && <p className="discount">Discount</p>}
+      { product.recommended && <div className="recommended">For You</div>}
     </div>
   )
 }
