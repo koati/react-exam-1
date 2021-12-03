@@ -5,7 +5,7 @@ const Products = ({ items }) => {
   return (
     <section className="container">
       {!items.length && <p className="sorry">Sorry, no products found</p>}
-      { items.map(product => <Product product={product} /> )} 
+      { items.map(product => <Product key={product.id} product={product} /> )} 
     </section>
   )
 }

@@ -19,7 +19,7 @@ const Product = ({ product, search }) => {
         }
         {!showPrice && 
           product.opinions.map(opinion => 
-            <div className="description">
+            <div key={opinion.id} className="description">
               <p>{opinion.message}</p>
               <p className="name">({opinion.name})</p>
             </div>

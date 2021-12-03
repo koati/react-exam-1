@@ -1,5 +1,6 @@
 const initialProducts = [
   {
+    id: 1,
     title: 'Some fancy product',
     description: 'Soo good because soo good',
     price: 70,
@@ -8,16 +9,19 @@ const initialProducts = [
     recommended: false,
     opinions: [
       { 
+        id: 1,
         message: 'I liked it',
         name: 'Fred'
       },
       { 
+        id: 2,
         message: 'I liked it so much',
         name: 'John'
       }
     ]
   },
   {
+    id: 2,
     title: 'Not so fancy product',
     description: 'Not so good because not so good',
     price: 7,
@@ -26,16 +30,19 @@ const initialProducts = [
     recommended: true,
     opinions: [
       { 
+        id: 1,
         message: 'I did not like it',
         name: 'James'
       },
       { 
+        id: 2,
         message: 'I hated it',
         name: 'Bob'
       }
     ]
   },
   {
+    id: 3,
     title: 'A product',
     description: 'It exists',
     price: 17,
@@ -44,12 +51,14 @@ const initialProducts = [
     recommended: false,
     opinions: [
       { 
+        id: 1,
         message: 'I have it',
         name: 'Harry'
       }
     ]
   },
   {
+    id: 4,
     title: 'Another fancy product',
     description: 'Also good',
     price: 80,
@@ -58,20 +67,24 @@ const initialProducts = [
     recommended: true,
     opinions: [
       { 
+        id: 1,
         message: 'I liked it as well',
         name: 'Fred'
       },
       { 
+        id: 2,
         message: 'I liked it so much',
         name: 'Bob'
       },
       { 
+        id: 3,
         message: 'I just liked it',
         name: 'Sam'
       }
     ]
   },
   {
+    id: 5,
     title: 'Who knows what',
     description: 'Someone must',
     price: 27,
@@ -80,6 +93,7 @@ const initialProducts = [
     recommended: false,
     opinions: [
       { 
+        id: 1,
         message: 'What is this',
         name: 'Clark'
       }
