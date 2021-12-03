@@ -40,7 +40,7 @@ const initialProducts = [
     description: 'It exists',
     price: 17,
     currency: 'EUR',
-    discount: true,
+    discount: false,
     recommended: false,
     opinions: [
       { 

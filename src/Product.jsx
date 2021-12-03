@@ -12,17 +12,17 @@ const Product = ({ product, search }) => {
       <hr />
       <main>
         {showPrice && 
-          <>
+          <div className="description">
             <p>{product.description}</p>
             <p>{product.price} <span>{product.currency}</span> </p>
-          </>
+          </div>
         }
         {!showPrice && 
           product.opinions.map(opinion => 
-            <>
+            <div className="description">
               <p>{opinion.message}</p>
               <p className="name">({opinion.name})</p>
-            </>
+            </div>
           )
         }
       </main>
